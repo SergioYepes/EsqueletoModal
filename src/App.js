@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import {openModal,openModal1} from './components/openModal';
 
 function App() {
+
+  function handleOpenModal(){
+    openModal()
+  } 
+  function handleOpenModal1(){
+    openModal1()
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={handleOpenModal}>open modal</button>
+      <button onClick={handleOpenModal1}>open modal</button>
     </div>
   );
 }
